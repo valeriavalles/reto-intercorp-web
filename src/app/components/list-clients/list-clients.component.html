@@ -1,0 +1,41 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center">
+              <span class="h3 ">Lista de Clientes Registrados</span>
+            </div>
+            
+            <button class="btn btn-dark btn-lg float-end" routerLink="/registro" >Registrar</button>
+            <div class="mt-3">
+              <h4>Análisis de los Clientes</h4>
+              <p><strong>Promedio de las edades</strong> : {{promedio}}</p>
+              <p><strong>Desviación Standar</strong>  : {{desvSatandar}}</p>
+            </div>
+           
+            <table class="table table-striped mt-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre </th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Fecha de Nacimiento</th>
+                    <th scope="col">Fecha probable de muerte
+                        
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let Cliente of clientes">
+                    <th>{{ Cliente.nombre }}</th>
+                    <td>{{ Cliente.apellido }}</td>
+                    <td>{{ Cliente.edad }}</td>
+                    <td>{{ Cliente.cumpleanos }}</td>
+                    <td>{{ Cliente.cumpleanos }}  </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div>
+              </div>
+        </div>
+    </div>
+</div>
